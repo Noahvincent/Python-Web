@@ -1,0 +1,8 @@
+// Create a file within the project's folder named requirements.txt and put in it the line: requests==2.18.1
+// Then go back to your app.py file and write the following code to get the source conde of a certain page.
+
+import requests
+
+request = requests.get("http://www.google.com")
+
+print(request.content)
