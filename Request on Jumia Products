@@ -1,0 +1,8 @@
+import requests
+
+request = requests.get("https://www.jumia.ma/32-led-tv-led32d2930-garantie-3-ans-noir-tcl-mpg16296.html")
+
+# https://www.jumia.ma/32-led-tv-led32d2930-garantie-3-ans-noir-tcl-mpg16296.html
+# <span dir="ltr" data-price="2279">2&nbsp;279</span>
+
+print(request.content)
