@@ -1,0 +1,13 @@
+import requests
+from bs4 import BeautifulSoup
+
+
+request = requests.get("https://www.jumia.ma/32-led-tv-led32d2930-garantie-3-ans-noir-tcl-mpg16296.html")
+content = request.content
+# print(request.content)
+soup = BeautifulSoup(content, "html.parser")
+element = soup.find("span", {"dir": "ltr", "data-price": "2279"})
+print(element.text.strip())
+
+
+# <span dir="ltr" data-price="2279">2&nbsp;279</span>
